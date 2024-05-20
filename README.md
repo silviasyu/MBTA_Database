@@ -1,4 +1,4 @@
-# MBTA Database Querier
+# MBTA CRUD App
 
 ## CS5200 Database Management System Project
 
@@ -6,7 +6,7 @@ This project was created for the CS5200 Database Management System course's fina
 database and application allows users to make numerous useful queries regarding the MBTA (Massachusetts Bay Transportation Authority) subway stations, trains, and lines. The database reflects the concepts learned throughout the semester in this class, including how to create a database (tables, queries, functions, and procedures) while the application allows users to perform CRUD operations (create, read, update, and delete).
 
 ## Project Overview 
-The MBTA Database Querier was created using SQL and MySQL for the database, PyMySql to connect the 
+The MBTA CRUD App was created using SQL and MySQL for the database, PyMySql to connect the 
 database with the front end (the Terminal) and Python for the front end code. Through this application, 
 users are able to search by station or line and retrieve information. For a station, users could get
 information such as all arrival times, the arrival times after a given time, and the associated lines 
@@ -57,11 +57,11 @@ The following is the conceptual design of this database. This database has 6 ent
 
 ## Installation
 1. Clone the repository
-2. Open MySQL workbench and connect to your MySQL database then import "LiklikadceNYuS_dump.sql" (This action will create the database 'mbtadb' along with all the necessary tables, data, functions and procedures.)
+2. Open MySQL workbench and connect to your MySQL database then import dump file using the "import "mbta_db_dump.sql" command. (This action will create the database 'mbtadb' along with all the necessary tables, data, functions and procedures.)
 
 ## How to Use
 1. Open the terminal and navigate to the directory of the cloned repository.
-2. Run "python LiklikadceNYuS_app_code.py" or "python3 LiklikadceNYuS_app_code.py"
+2. Run "python mbta_db_app_code.py" or "python3 mbta_db_app_code.py"
 3. Enter your MySQL workbench credentials 
 
 ## Activity Diagram (user flow of the system) 
