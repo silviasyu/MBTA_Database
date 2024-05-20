@@ -1,9 +1,8 @@
 import pymysql
 
 def setup():
-    """ This function takes no input parametesr and takes care of connecting the front end 
-         to the database. it also prompts the user to put in their credentials in order to connect 
-        to their database
+    """ This function takes no input parameters. It connects the front end to the database by prompting
+        the user for their MySQL Workbench credentials.
     """
     username = input("Enter your MySQL username: ")
     password = input("Enter your MySQL password: ")
@@ -24,8 +23,8 @@ def setup():
 
 
 def input_validation(my_list, input_prompt):
-    """ takes in a list and a input prompt as  parameters and prompts the user for an input if input value is in the 
-        list it returns a success message otherwise it returns False and keeps prompting the user to pick a valid aswer
+    """ This function takes in a list and a input prompt as parameters and prompts the user for an input if input value is in the 
+        list it returns a success message otherwise it returns False and keeps prompting the user to pick a valid aswer.
     """
 
     print(input_prompt)
@@ -43,9 +42,9 @@ def input_validation(my_list, input_prompt):
 
 
 def transform_to_list(list_of_dict, name):
-    ''' this is the helper functon that takes in list of dictionaries and a name of value in the dictionary 
-        iterates through the  list and creates the list of items that map to the name parameter 
-     '''
+    ''' This is a helper functon that takes in list of dictionaries and a name of value in the dictionary 
+        iterates through the list and creates the list of items that map to the name parameter.
+    '''
     return_list = []
     for items in list_of_dict:
         return_list.append(items[name])
@@ -53,7 +52,7 @@ def transform_to_list(list_of_dict, name):
 
 
 def user_function():
-    ''' this function takes care of all the user interaction associated with a user of the MBTA station'''
+    ''' This function takes care of all the user interaction associated with a user of the MBTA station'''
     cursor.callproc("all_lines")
     line_options = [line for line in cursor.fetchall()]
     line_list = transform_to_list(line_options, "line_name")
@@ -360,8 +359,8 @@ def admin():
         
 
 def user_or_admin():
-    """This function asks user to choose it's role: user or admin
-        if user is selected then we call a user function else we call admin function."""
+    """This function prompts user to choose it's role: user or admin. If the role selected is user, 
+    then the user function will be called else the admin function will be called."""
     answer = input_validation(["user", "admin"], "Please choose one of the following: ")
     if answer == "user":
         user_function()
@@ -388,6 +387,8 @@ def user_or_admin():
 
 
 def main():
+    """ This is the main function, the entry point of this program. It starts with trying to setup and connect to the 
+    database. Then it prompts the users for their role."""
     try: 
         setup()
         user_or_admin()
