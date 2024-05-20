@@ -19,8 +19,6 @@ accessible.
 - MySQL workbench (for the database)
 - Python and the terminal (for the front end client application)
 
-# Software Needed
-
 ## How to Use 
 1. Clone the repository
 2. Open MySQL workbench and connect to your MySQL database then import "LiklikadceNYuS_dump.sql" 
