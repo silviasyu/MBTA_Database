@@ -1,6 +1,6 @@
 # MBTA Database Querier
 
-## CS5200 DataBase Management System Project
+## CS5200 Database Management System Project
 
 This project was created for the CS5200 Database Management System course's final project. This simple 
 database and application allows users to make numerous useful queries regarding the MBTA
@@ -17,12 +17,14 @@ accessible.
 
 ## Technical Specification
 - MySQL workbench (for the database)
-- Python and the terminal (for the front end client application) 
+- Python and the terminal (for the front end client application)
+
+# Software Needed
 
 ## How to Use 
 1. Clone the repository
 2. Open MySQL workbench and connect to your MySQL database then import "LiklikadceNYuS_dump.sql" 
-3. Open the terminal and navigate to the director of the cloned repository.
+3. Open the terminal and navigate to the directory of the cloned repository.
 4. Run "python LiklikadceNYuS_app_code.py" or "python3 LiklikadceNYuS_app_code.py"
 5. Enter your MySQL workbench credentials 
 
